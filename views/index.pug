@@ -1,21 +1,43 @@
 doctype html
 html
   head
-    title Anthony Youkhanna Resume
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Anthony Website Tests
     link(rel='stylesheet', href='/stylesheets/style.css')
-    nav 
-      navbar-default hello?
-        h1 My Website!
-    ul
-      li
-        a Home
-      li
-        a Page 1
-      li
-        a Page 2
-  input
-
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
   body
-    block content
-    h1 Anthony Youkhanna Resume
-    div hello world
+    script let FF_FOUC_FIX
+      
+      
+    .container
+      // Header Section
+      .header
+        .logo Anthony's Website
+        .nav 
+          a(href="#") Resume
+          a(href="#") Extras
+          a(href="https://github.com/AnthonyYoukhanna")
+            i.fa.fa-github
+          a(href="https://www.linkedin.com/in/anthony-youkhanna/")
+            i.fa.fa-linkedin
+
+      
+      // Main Content Section
+      .container
+        .main-content
+          each item, index in ["Card 1", "Card 2", "Card 3", "Card 4"]
+            .card
+              h3= item
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi ut facilisis.
+              button.button
+                | Learn More
+                i(class="icon-right-arrow") // Icon placeholder
+
+      .container
+        .main-content 
+          .card 
+            h3 Other container
+      // Footer Section
+      .footer
+        p © 2024 MySite - All Rights Reserved
